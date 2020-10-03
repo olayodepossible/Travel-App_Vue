@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <TheNavigation />
+    <router-view :key="$route.path" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TheNavigation from "@/components/TheNavigation";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    TheNavigation,
   },
 };
 </script>
