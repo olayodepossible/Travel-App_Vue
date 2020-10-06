@@ -1,6 +1,5 @@
 <template>
-  <section>
-    <h1>Experiences</h1>
+  <section class="experience">
     <h2>{{ exp.name }}</h2>
     <div class="exp__details">
       <img :src="require(`@/assets/${exp.image}`)" alt="exp.name" />
@@ -41,6 +40,9 @@ export default {
 </script>
 
 <style  scoped>
+.experience {
+  margin-top: 50px;
+}
 .exp__details {
   display: flex;
   justify-content: space-between;

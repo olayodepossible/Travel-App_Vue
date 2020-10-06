@@ -19,13 +19,20 @@
         </router-link>
       </li>
     </ul>
+    <p class="back-btn">
+      <BackButton />
+    </p>
   </nav>
 </template>
 
 <script>
 import Store from "@/store";
+import BackButton from "@/components/TheBackButton";
 
 export default {
+  components: {
+    BackButton,
+  },
   data() {
     return {
       destinations: Store.destinations,
@@ -38,6 +45,7 @@ export default {
 <style scoped>
 #nav {
   display: flex;
+  position: relative;
 }
 
 #nav a {
@@ -58,6 +66,12 @@ export default {
 
 .links:hover {
   text-decoration: underline;
+}
+
+.back-btn {
+  position: absolute;
+  top: 5px;
+  right: 50px;
 }
 
 .logo {
